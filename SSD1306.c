@@ -22,7 +22,8 @@
  */
 #include "ssd1306.h"
 
-extern I2C_HandleTypeDef hi2c1;
+#include "i2c.h"     // ← add this
+#include "main.h"    // ← add this
 /* Write command */
 #define SSD1306_WRITECOMMAND(command)      ssd1306_I2C_Write(SSD1306_I2C_ADDR, 0x00, (command))
 /* Write data */
